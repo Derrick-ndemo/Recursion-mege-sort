@@ -51,7 +51,9 @@ function mergeSortIntegers(arr) {
     const rightHalf = arr.slice(mid);
 
     const sortedLeft = mergeSortIntegers(leftHalf);
+    console.log('done with left half')
     const sortedRight = mergeSortIntegers(rightHalf);
+    console.log('done with right half')
 
     return mergeIntegers(sortedLeft, sortedRight);
 }
@@ -72,7 +74,9 @@ function mergeIntegers(left, right) {
     }
 
     // Add remaining elements
+    console.log('while loop done now to concat')
     result = result.concat(left.slice(i)).concat(right.slice(j));
+    console.log(result)
     
     return result;
 }
